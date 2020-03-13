@@ -52,7 +52,7 @@ html {
     height: 100%;
     background-color: $background;  
 
-    @include fluid-type($min-size, $max-size, 20px, 35px);
+    @include fluid-type($min-size, $max-size, 20px, 30px);
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     color: $foreground;

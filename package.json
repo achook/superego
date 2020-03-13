@@ -1,0 +1,19 @@
+{
+  "name": "superego",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3"
+  },
+  "scripts": {
+    "test": "npm run serve",
+    "serve": "node serve.js",
+    "deploy": "firebase deploy"
+  },
+  "author": "achook",
+  "license": "MIT"
+}

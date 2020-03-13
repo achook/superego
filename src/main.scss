@@ -1,0 +1,164 @@
+$accent: #D60270;
+$background: #FDFDFD;
+$foreground: #020202;
+
+$min-size: 320px;
+$max-size: 1200px;
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+@mixin fluid-padding($min-vw, $max-vw, $min-padding, $max-padding) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-padding);
+    $u4: unit($max-padding);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            padding-bottom: $min-padding;
+
+            @media screen and (min-width: $min-vw) {
+                padding-bottom: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                padding-bottom: $max-padding;
+            }
+        }
+    }
+}
+
+html {
+    height: 100%;
+    background-color: $background;  
+
+    @include fluid-type($min-size, $max-size, 20px, 35px);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    color: $foreground;
+    text-align: center;
+}
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+    padding: 10px;
+}
+
+a {
+    fill: $accent;
+    color: $accent;
+}
+
+svg {
+    height: 1em;
+    width: 1em;
+    vertical-align: -15%;
+
+    fill: inherit;
+}
+
+body, main, .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.mail {
+    flex-grow: 0;
+}
+
+.name, .nick, .city, .bio, .links {
+    margin: 0;
+    padding: 0;
+}
+
+.name {   
+    font-size: 2em;
+
+    @include fluid-padding($min-size, $max-size, 4px, 8px);
+}
+
+.nick {
+    font-size: 1.6em;
+
+    @include fluid-padding($min-size, $max-size, 20px, 40px);
+}
+
+.bio {
+    @include fluid-padding($min-size, $max-size, 10px, 20px);
+}
+
+.city, .bio {
+    font-size: 1.3em;
+}
+
+.city {
+    .where {
+        margin-left: 6px;
+
+        font-size: .7em;
+        font-style: italic;
+
+        svg {
+            padding-left: 2px;
+        }
+    }
+
+    @include fluid-padding($min-size, $max-size, 22px, 50px);
+}
+
+.links {
+    font-size: 1.25em;
+
+    @include fluid-padding($min-size, $max-size, 10px, 20px);
+}
+
+.link {
+    svg {
+        padding-left: 2px;
+    }
+
+    @include fluid-padding($min-size, $max-size, 6px, 8px);
+}
+
+.mail {
+    padding: 7px 14px;
+    border-radius: 10px;
+
+    background-color: $accent;
+
+    font-size: 1.1em;
+    color: $background;
+    text-decoration: none;
+}

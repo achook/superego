@@ -1,0 +1,8 @@
+# Directory bigger than the entire universe
+node_modules/
+
+# Comiled files
+dist/
+
+# Firebase cache
+.firebase/

@@ -110,7 +110,7 @@ main {
 }
 
 .nick {
-    font-size: 1.6em;
+    font-size: 1.5em;
 
     @include fluid-padding($min-size, $max-size, 20px, 40px);
 }

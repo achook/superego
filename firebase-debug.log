@@ -1,0 +1,17 @@
+[debug] [2020-07-06T19:42:38.205Z] ----------------------------------------------------------------------
+[debug] [2020-07-06T19:42:38.207Z] Command:       /usr/local/Cellar/node/14.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-07-06T19:42:38.207Z] CLI Version:   8.4.3
+[debug] [2020-07-06T19:42:38.207Z] Platform:      darwin
+[debug] [2020-07-06T19:42:38.207Z] Node Version:  v14.5.0
+[debug] [2020-07-06T19:42:38.208Z] Time:          Mon Jul 06 2020 21:42:38 GMT+0200 (czas środkowoeuropejski letni)
+[debug] [2020-07-06T19:42:38.208Z] ----------------------------------------------------------------------
+[debug] [2020-07-06T19:42:38.208Z] 
+[debug] [2020-07-06T19:42:38.220Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-06T19:42:38.221Z] > authorizing via signed-in user
+[debug] [2020-07-06T19:42:38.221Z] [iam] checking project disco-domain-213319 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-06T19:42:38.222Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-06T19:42:38.223Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-06T19:42:38.641Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 06 Jul 2020 19:42:38 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-06T19:42:38.672Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/disco-domain-213319:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

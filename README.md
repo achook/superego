@@ -1,6 +1,8 @@
 # superego
 
-## My personal landing page
+My personal landing page, availible at [kucza.xyz](https://kucza.xyz)
+
+## How to get it working?
 
 Install
 
@@ -12,4 +14,4 @@ Live server
 
 Deploy
 
-``npm run serve``
+``npm run deploy``

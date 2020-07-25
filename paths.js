@@ -3,7 +3,10 @@ const paths = {
     pug: 'src/index.pug',
 
     html: 'dist/index.html',
-    css: 'dist/main.css'
+    css: 'dist/main.css',
+
+    robotsIn: 'static/robots.txt',
+    robotsOut: 'dist/robots.txt'
 }
 
 exports.paths = paths

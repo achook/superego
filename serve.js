@@ -40,6 +40,7 @@ const writeSass = path => {
 
 writePug(paths.pug)
 writeSass(paths.sass)
+fs.copyFileSync(paths.robotsIn, paths.robotsOut)
 
 let fsWaitForPug = false
 fs.watch(paths.pug, (event, filename) => {

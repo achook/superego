@@ -7,7 +7,7 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "pug": "^2.0.4",
-    "sass": "^1.26.9"
+    "sass": "^1.26.10"
   },
   "scripts": {
     "test": "npm run serve",

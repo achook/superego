@@ -12,7 +12,8 @@
   "scripts": {
     "test": "npm run serve",
     "serve": "node serve.js",
-    "deploy": "node deploy.js && firebase deploy"
+    "build": "node build.js",
+    "deploy": "node build.js && firebase deploy"
   },
   "author": "achook",
   "license": "MIT"
